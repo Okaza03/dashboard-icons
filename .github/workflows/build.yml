@@ -1,7 +1,9 @@
 name: Build icons
+permissions:
+  contents: write
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - "svg/**"
       - "scripts/**"
@@ -23,6 +25,11 @@ jobs:
         with:
           node-version: 20
 
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Install
         run: |
           if [ -f pnpm-lock.yaml ]; then npm i -g pnpm && pnpm i --frozen-lockfile; \
@@ -42,3 +49,4 @@ jobs:
             webp/**
             index.json
             svg/**
+
