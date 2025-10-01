@@ -1,7 +1,7 @@
 name: Build icons
 
 permissions:
-  contents: write # allow the workflow to push commits
+  contents: write
 
 on:
   push:
@@ -57,19 +57,7 @@ jobs:
           commit_message: "chore: build icons"
           file_pattern: |
             png/**
-            webp/**
             index.json
+            index.color.json
+            index.mono.json
             svg/**
-          # If you use branch protection requiring PRs, switch to:
-          # branch: build
-          # create_branch: true
-
-      # If your main is protected (PRs required), uncomment this block and the two lines above.
-      # - name: Create Pull Request
-      #   uses: peter-evans/create-pull-request@v6
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: build
-      #     base: main
-      #     title: "chore: build icons"
-      #     body: "Auto-generated assets"

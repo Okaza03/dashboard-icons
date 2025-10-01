@@ -1,29 +1,40 @@
-# Dashboard Icons
+# Dashboard Icons (color + mono)
 
-A tiny repo of service/app logos rendered to PNG + WebP at multiple sizes from SVG source.
+Generated PNGs from SVG sources. Two categories:
+- `color` – full-color logos
+- `mono` – black & white only
 
-## Quick use
+## Quick links
 
-- PNG (256):  
-  `https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/256/pihole.png`
+**Color (PNG 256):**
+`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/color/256/logo.png`
 
-- WebP (256):  
-  `https://raw.githubusercontent.com/okaza03/dashboard-icons/main/webp/256/pihole.webp`
+**Mono (PNG 256):**
+`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/mono/256/logo.png`
 
-- SVG:  
-  `https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/pihole.svg`
+**SVG (color):**
+`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/color/logo.svg`
 
-> Swap `pihole` and sizes (`64, 128, 256, 512`) as needed.
+**SVG (mono):**
+`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/mono/logo.svg`
+
+> Swap the size (`64, 128, 256, 512`) and the icon name.
 
 ## Adding icons
-1. Add an SVG to `svg/your-icon.svg`.
-2. Push to `main`. GitHub Actions will generate PNG/WebP + `index.json`.
+1. Put SVGs in the right folder:
+   - Full-color → `svg/color/<name>.svg`
+   - Black & white → `svg/mono/<name>.svg`
+2. Push to `main`. CI builds PNGs and updates `index.json`.
 
 ## Naming rules
-- File name = lower-kebab-case (`home-assistant.svg`, `pi-hole.svg` → `pihole.svg`).
-- Transparent background only.
-- Square viewBox preferred (e.g., `0 0 512 512`).
+- File name = lower-kebab-case (`home-assistant.svg` → `homeassistant.svg` , `that-logo.svg` → `logo.svg`).
+- Transparent background, square-friendly (`viewBox="0 0 N N"` is ideal).
+- For `mono`, ensure pure black/white (no grays).
+
+## Indexes
+- `index.json` – all icons with metadata
+- `index.color.json` – color only
+- `index.mono.json` – mono only
 
 ## Legal
-- Many brand assets are trademarks. Use at your own discretion and follow brand guidelines.
-- If using Simple Icons SVGs, they’re under CC0, but trademarks still apply.
+Brand assets may be trademarks. Follow brand guidelines.

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "clean": "rimraf png webp",
+    "clean": "rimraf png",
     "format": "prettier -w ."
   },
   "devDependencies": {

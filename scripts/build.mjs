@@ -4,12 +4,14 @@ import { glob } from "glob";
 import sharp from "sharp";
 import { optimize } from "svgo";
 
+// output sizes
 const sizes = [64, 128, 256, 512];
 
-const outDirs = {
-  png: sizes.map((s) => `png/${s}`),
-  webp: sizes.map((s) => `webp/${s}`),
-};
+// categories and their input/output roots
+const categories = [
+  { key: "color", inDir: "svg/color", outDir: "png/color" },
+  { key: "mono", inDir: "svg/mono", outDir: "png/mono" },
+];
 
 const slugify = (s) =>
   s
@@ -20,28 +22,27 @@ const slugify = (s) =>
     .replace(/^-|-$/g, "");
 
 async function ensureDirs() {
-  for (const kind of Object.keys(outDirs)) {
-    for (const dir of outDirs[kind]) await fs.ensureDir(dir);
+  for (const { outDir } of categories) {
+    for (const size of sizes) {
+      await fs.ensureDir(`${outDir}/${size}`);
+    }
   }
 }
 
-async function build() {
-  await ensureDirs();
-
-  const svgFiles = await glob("svg/*.svg");
-  const index = [];
+async function buildCategory({ key, inDir, outDir }) {
+  const svgFiles = await glob(`${inDir}/*.svg`);
+  const items = [];
 
   for (const file of svgFiles) {
     const name = file.split("/").pop().replace(".svg", "");
     const id = slugify(name);
     const raw = await readFile(file, "utf8");
 
-    // SVGO optimize
+    // Optimize SVG
     const { data: svg } = optimize(raw, {
       multipass: true,
       floatPrecision: 2,
       plugins: [
-        "removeDimensions",
         "removeDoctype",
         "removeXMLProcInst",
         "removeComments",
@@ -53,47 +54,71 @@ async function build() {
       ],
     });
 
-    // keep optimized SVG as source-of-truth too (optional)
+    // Optionally overwrite source with optimized SVG
     await writeFile(file, svg, "utf8");
 
-    const promises = [];
-
+    // Generate PNGs
+    const tasks = [];
     for (const size of sizes) {
-      const pngOut = `png/${size}/${id}.png`;
-      const webpOut = `webp/${size}/${id}.webp`;
-
-      // rasterize from SVG for each size
-      const img = sharp(Buffer.from(svg));
-      promises.push(
-        img
-          .resize(size, size, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      const pngOut = `${outDir}/${size}/${id}.png`;
+      // transparent background, squared, contain
+      tasks.push(
+        sharp(Buffer.from(svg))
+          .resize(size, size, {
+            fit: "contain",
+            background: { r: 0, g: 0, b: 0, alpha: 0 },
+          })
           .png({ compressionLevel: 9 })
           .toFile(pngOut)
       );
-
-      promises.push(
-        sharp(Buffer.from(svg))
-          .resize(size, size, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
-          .webp({ lossless: true })
-          .toFile(webpOut)
-      );
     }
+    await Promise.all(tasks);
 
-    await Promise.all(promises);
-
-    index.push({
+    items.push({
       id,
       name,
+      type: key, // "color" or "mono"
       files: {
-        svg: `svg/${id}.svg`,
-        png: sizes.map((s) => `png/${s}/${id}.png`),
-        webp: sizes.map((s) => `webp/${s}/${id}.webp`),
+        svg: `${inDir}/${id}.svg`,
+        png: sizes.map((s) => `${outDir}/${s}/${id}.png`),
       },
     });
   }
 
-  await writeFile("index.json", JSON.stringify(index, null, 2));
-  console.log(`Built ${index.length} icons.`);
+  return items;
+}
+
+async function build() {
+  await ensureDirs();
+
+  const all = [];
+  for (const c of categories) {
+    const items = await buildCategory(c);
+    all.push(...items);
+  }
+
+  // write a top-level index, + per-category (nice for consumers)
+  await writeFile("index.json", JSON.stringify(all, null, 2));
+  await writeFile(
+    "index.color.json",
+    JSON.stringify(
+      all.filter((i) => i.type === "color"),
+      null,
+      2
+    )
+  );
+  await writeFile(
+    "index.mono.json",
+    JSON.stringify(
+      all.filter((i) => i.type === "mono"),
+      null,
+      2
+    )
+  );
+
+  console.log(
+    `Built ${all.length} icons across ${categories.length} categories.`
+  );
 }
 
 build().catch((e) => {
