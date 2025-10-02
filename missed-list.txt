@@ -1,0 +1,303 @@
+﻿McDonald's
+JPMorgan Chase
+Alibaba
+ExxonMobil
+Chevron
+Procter & Gamble
+Nestlé
+Johnson & Johnson
+Pfizer
+Red Hat
+Coupa Software
+Micro Focus
+Paramount+
+HBO Max
+Apple Music
+Best Buy
+Shein
+Temu
+MercadoLibre
+Cash App
+Chime
+Monday.com
+Rivian
+Lucid Motors
+BYD
+NIO
+Dunkin’
+Burger King
+Subway
+Domino’s
+Pizza Hut
+Taco Bell
+Chipotle
+PepsiCo
+Moderna
+AstraZeneca
+Bayer
+Novartis
+Roche
+CVS Health
+Walgreens Boots Alliance
+Zscaler
+CrowdStrike
+Palo Alto Networks
+New Relic
+Philips
+Nest
+GoPro
+Lego
+Canon
+Bumble
+Hinge
+Match.com
+Grindr
+Khan Academy
+MasterClass
+NortonLifeLock
+Slack (you had Slack Technologies, but here’s the logo brand)
+ZipRecruiter
+Indiegogo
+Weebly
+Bluehost
+Unity (you had Unity Technologies, logo just says Unity)
+Unreal Engine
+Epic Games Store
+Battle.net
+EA Sports
+Rockstar Games
+2K Games
+Activision Blizzard
+Capcom
+Bandai Namco
+Square Enix
+Dropbox Paper (separate logo from Dropbox)
+Booking.com
+Kayak
+Skyscanner
+Delta Airlines
+American Airlines
+United Airlines
+Southwest Airlines
+Qatar Airways
+Singapore Airlines
+H&M
+Primark
+Louis Vuitton
+Gucci
+Prada
+Chanel
+Rolex
+Cartier
+Tiffany & Co.
+Burberry
+Patagonia
+North Face
+Columbia Sportswear
+Under Armour
+New Balance
+Vans
+Converse
+Crocs
+Timberland
+Supreme
+Balenciaga
+Givenchy
+Diesel
+Levi’s
+Wrangler
+Calvin Klein
+Tommy Hilfiger
+Ralph Lauren
+Victoria’s Secret
+Bath & Body Works
+Sephora
+Ulta Beauty
+Estee Lauder
+L’Oréal
+Maybelline
+MAC Cosmetics
+Clinique
+Avon
+Revlon
+Glossier
+Fenty Beauty
+Huda Beauty
+Anastasia Beverly Hills
+Urban Decay
+Too Faced
+NYX Cosmetics
+Pat McGrath Labs
+Dyson
+Whirlpool
+KitchenAid
+Electrolux
+Kenwood
+Realme
+Alcatel
+Gigabyte
+Kingston
+Western Digital
+Dropbox Sign (DocSend)
+HelloSign
+Boxcryptor
+ZoomInfo
+PitchBook
+Morningstar
+Thomson Reuters
+Moody’s
+S&P Global
+Deloitte
+PwC
+KPMG
+Capgemini
+Heineken
+Budweiser
+Bud Light
+Coors
+Miller Lite
+Corona
+Stella Artois
+Guinness
+Smirnoff
+Absolut Vodka
+Grey Goose
+Jack Daniel’s
+Jim Beam
+Johnnie Walker
+Hennessy
+Moët & Chandon
+Veuve Clicquot
+Bacardi
+Captain Morgan
+Patrón
+Don Julio
+Jose Cuervo
+Malibu Rum
+Red Bull
+Monster Energy
+Rockstar Energy
+Gatorade
+Powerade
+Vitaminwater
+Fanta
+Sprite
+7UP
+Dr Pepper
+Mountain Dew
+Lipton
+Arizona Iced Tea
+Nestea
+LaCroix
+Perrier
+San Pellegrino
+Evian
+Fiji Water
+Dasani
+Aquafina
+Smartwater
+Minute Maid
+Tropicana
+Ocean Spray
+Snapple
+Nescafé
+Nespresso
+Illy
+Lavazza
+Peet’s Coffee
+Caribou Coffee
+Tim Hortons
+Keurig
+Krispy Kreme
+Cinnabon
+Auntie Anne’s
+Ben & Jerry’s
+Häagen-Dazs
+Baskin-Robbins
+Cold Stone Creamery
+Dairy Queen
+Jollibee
+Popeyes
+Wingstop
+Five Guys
+In-N-Out
+Shake Shack
+White Castle
+Whataburger
+Sonic Drive-In
+Panera Bread
+Pret a Manger
+Wendy’s
+Microsoft Word
+Microsoft Excel
+Microsoft PowerPoint
+Microsoft Outlook
+Microsoft Teams
+Visual Studio
+Visual Studio Code
+OneNote
+Notepad++
+Sublime Text
+IntelliJ IDEA
+Android Studio
+Unity Hub
+Unreal Engine Launcher
+Maya
+3ds Max
+Cinema 4D
+ZBrush
+Adobe Photoshop
+Adobe Illustrator
+Adobe InDesign
+Adobe Premiere Pro
+Adobe After Effects
+Adobe Lightroom
+Adobe XD
+Corel Painter
+DaVinci Resolve
+Final Cut Pro
+Avid Media Composer
+FL Studio
+Ableton Live
+Logic Pro
+Cubase
+Pro Tools
+GarageBand
+OBS Studio
+Streamlabs Desktop
+Zoom (desktop app)
+Slack (desktop app)
+Discord (desktop app)
+Microsoft Edge
+Google Chrome
+Mozilla Firefox
+Opera GX
+Brave Browser
+Tor Browser
+Safari (Mac)
+Dropbox (desktop client)
+Google Drive (desktop client)
+Box Drive
+MegaSync
+VLC Media Player
+Spotify (desktop app)
+Epic Games Launcher
+EA App (Origin)
+Ubisoft Connect
+GOG Galaxy
+Twitch Studio
+GitHub Desktop
+Tableau Desktop
+Power BI Desktop
+MATLAB
+SPSS
+Oracle SQL Developer
+MySQL Workbench
+PgAdmin
+HeidiSQL
+VMware Workstation
+VMware Fusion
+Parallels Desktop
+Docker Desktop
+PuTTY
+CyberGhost VPN
