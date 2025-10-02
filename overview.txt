@@ -252,3 +252,8 @@ protonvpn.svg
 lastpass.svg
 1password.svg
 bitwarden.svg
+counterstrike.svg
+fortnite.svg
+valorant.svg
+pubg.svg
+fifa.svg

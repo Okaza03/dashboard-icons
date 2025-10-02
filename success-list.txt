@@ -252,3 +252,8 @@ ProtonVPN
 LastPass
 1Password
 Bitwarden
+counterstrike
+fortnite
+valorant
+pubg
+fifa
