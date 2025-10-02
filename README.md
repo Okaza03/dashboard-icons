@@ -107,8 +107,8 @@ Browse the complete icon collections:
 
 | ❌ Incorrect | ✅ Correct |
 |-------------|-----------|
-| `HomeAssistant.svg` | `home-assistant.svg` |
-| `My_App.svg` | `my-app.svg` |
+| `HomeAssistant.svg` | `homeassistant.svg` |
+| `My_App.svg` | `myapp.svg` |
 | `LOGO.SVG` | `logo.svg` |
 
 ---
