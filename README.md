@@ -1,53 +1,202 @@
-# Dashboard Icons
+<div align="center">
 
-Easily use high-quality PNG and SVG icons for dashboards. Icons are available in two styles:
-- **Color**: Full-color logos
-- **Mono**: Black & white only
+# 🎨 Dashboard Icons
 
----
+**High-quality PNG and SVG icons for your dashboards**
 
-## Quick Links
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Icons](https://img.shields.io/badge/icons-1000%2B-brightgreen.svg)](#available-icons)
 
-| Type         | PNG (256px)                                                                 | SVG                                                                |
-|--------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------|
-| **Color**    | [`color/256/logo.png`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/color/256/logo.png) | [`color/logo.svg`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/color/logo.svg) |
-| **Mono**     | [`mono/256/logo.png`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/mono/256/logo.png)   | [`mono/logo.svg`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/mono/logo.svg)   |
-
-> Change the size (`64`, `128`, `256`, `512`) and icon name as needed.
+</div>
 
 ---
 
-## Available Icons
+## 📦 What's Inside
 
-See the [overview.txt](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/overview.txt) for a full list of icons.
+This repository provides a comprehensive collection of dashboard icons in two styles:
 
----
+| Style | Description | Use Case |
+|-------|-------------|----------|
+| 🎨 **Color** | Full-color brand logos | Modern dashboards with vibrant UI |
+| ⚫ **Mono** | Black & white only | Minimalist or themed dashboards |
 
-## How to Add Icons
-
-1. Place SVG files in the correct folder:
-   - **Color**: `svg/color/<name>.svg`
-   - **Mono**: `svg/mono/<name>.svg`
-2. Push changes to `main`. CI will build PNGs and update `index.json`.
+Both styles are available as **SVG** (vector) and **PNG** (64px, 128px, 256px, 512px).
 
 ---
 
-## Naming & Format Rules
+## 🚀 Quick Start
 
-- Use lower-kebab-case for file names (`home-assistant.svg` → `homeassistant.svg`, `that-logo.svg` → `logo.svg`)
-- Transparent backgrounds, square-friendly (`viewBox="0 0 N N"` preferred)
-- Mono icons must be pure black/white (no grays)
+### Using Icons in Your Project
+
+Replace `<icon-name>` with your desired icon name (e.g., `github`, `docker`, `plex`):
+
+**Color Icons:**
+```
+# SVG (Recommended)
+https://raw.githubusercontent.com/Okaza03/dashboard-icons/main/svg/color/<icon-name>.svg
+
+# PNG (Choose size: 64, 128, 256, 512)
+https://raw.githubusercontent.com/Okaza03/dashboard-icons/main/png/color/256/<icon-name>.png
+```
+
+**Mono Icons:**
+```
+# SVG (Recommended)
+https://raw.githubusercontent.com/Okaza03/dashboard-icons/main/svg/mono/<icon-name>.svg
+
+# PNG (Choose size: 64, 128, 256, 512)
+https://raw.githubusercontent.com/Okaza03/dashboard-icons/main/png/mono/256/<icon-name>.png
+```
+
+### Example
+
+```html
+<!-- Using an SVG -->
+<img src="https://raw.githubusercontent.com/Okaza03/dashboard-icons/main/svg/color/github.svg" alt="GitHub" width="48">
+
+<!-- Using a PNG -->
+<img src="https://raw.githubusercontent.com/Okaza03/dashboard-icons/main/png/color/256/docker.png" alt="Docker" width="48">
+```
 
 ---
 
-## Index Files
+## 📋 Available Icons
 
-- `index.json`: All icons with metadata
-- `index.color.json`: Color icons only
-- `index.mono.json`: Mono icons only
+Browse the complete icon collections:
+
+- 🎨 **[Color Icons](color-overview.txt)** - Full list of color icons
+- ⚫ **[Mono Icons](mono-overview.txt)** - Full list of mono icons
+
+### Popular Icons
+
+`1password` • `adobe` • `amazon` • `apple` • `docker` • `github` • `gitlab` • `google` • `home-assistant` • `jellyfin` • `kubernetes` • `linux` • `microsoft` • `nextcloud` • `nginx` • `plex` • `portainer` • `proxmox` • `traefik` • `unraid` • and many more!
 
 ---
 
-## Legal
+## 🤝 Contributing
 
-Brand assets may be trademarks. Please follow brand guidelines.
+### How to Add New Icons
+
+1. **Prepare your SVG file:**
+   - Use lowercase kebab-case naming: `my-app.svg`
+   - Ensure transparent background
+   - Square-friendly aspect ratio (`viewBox="0 0 N N"` preferred)
+   - For mono icons: pure black/white only (no grays)
+
+2. **Place in the correct folder:**
+   ```
+   svg/color/<name>.svg   # For color icons
+   svg/mono/<name>.svg    # For mono icons
+   ```
+
+3. **Build the icons locally (optional):**
+   ```bash
+   npm install
+   npm run build
+   ```
+   This will:
+   - Optimize all SVG files
+   - Generate PNGs in all sizes (64, 128, 256, 512)
+   - Create/update `index.json`, `index.color.json`, and `index.mono.json`
+
+4. **Submit your changes:**
+   - Commit and push to `main` branch
+   - GitHub Actions will automatically run the build on push
+
+### Naming Guidelines
+
+| ❌ Incorrect | ✅ Correct |
+|-------------|-----------|
+| `HomeAssistant.svg` | `home-assistant.svg` |
+| `My_App.svg` | `my-app.svg` |
+| `LOGO.SVG` | `logo.svg` |
+
+---
+
+## 📚 API & Integration
+
+### JSON Indexes
+
+Programmatically access icon metadata (generated by build script):
+
+- **All Icons:** [`index.json`](index.json)
+- **Color Only:** [`index.color.json`](index.color.json)
+- **Mono Only:** [`index.mono.json`](index.mono.json)
+
+Each entry contains:
+```json
+{
+  "id": "github",
+  "name": "github",
+  "type": "color",
+  "files": {
+    "svg": "svg/color/github.svg",
+    "png": [
+      "png/color/64/github.png",
+      "png/color/128/github.png",
+      "png/color/256/github.png",
+      "png/color/512/github.png"
+    ]
+  }
+}
+```
+
+---
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+dashboard-icons/
+├── svg/
+│   ├── color/          # Color SVG icons
+│   └── mono/           # Mono SVG icons
+├── png/                # Generated PNG files (auto-generated)
+│   ├── color/
+│   │   ├── 64/
+│   │   ├── 128/
+│   │   ├── 256/
+│   │   └── 512/
+│   └── mono/
+│       ├── 64/
+│       ├── 128/
+│       ├── 256/
+│       └── 512/
+├── scripts/
+│   └── build.mjs       # Build script
+├── index.json          # Generated icon index (all)
+├── index.color.json    # Generated icon index (color only)
+└── index.mono.json     # Generated icon index (mono only)
+```
+
+### Build Script
+
+The build script (`npm run build`) performs:
+1. Optimizes all SVG files using SVGO
+2. Generates PNG versions in all sizes (64, 128, 256, 512)
+3. Creates JSON index files with metadata
+
+### Available Commands
+
+```bash
+npm run build    # Build all icons and generate indexes
+npm run clean    # Remove generated PNG files
+npm run format   # Format code with Prettier
+```
+
+---
+
+## ⚖️ Legal
+
+All brand assets belong to their respective trademark holders. Please comply with individual brand guidelines when using these icons. This repository does not claim ownership of any brand logos or trademarks.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by the community**
+
+[Report Issue](https://github.com/Okaza03/dashboard-icons/issues) • [Request Icon](https://github.com/Okaza03/dashboard-icons/issues/new)
+
+</div>
