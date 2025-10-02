@@ -1,43 +1,53 @@
-# Dashboard Icons (color + mono)
+# Dashboard Icons
 
-Generated PNGs from SVG sources. Two categories:
-- `color` – full-color logos
-- `mono` – black & white only
+Easily use high-quality PNG and SVG icons for dashboards. Icons are available in two styles:
+- **Color**: Full-color logos
+- **Mono**: Black & white only
 
-## Quick links
+---
 
-**Color (PNG 256):**
-`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/color/256/logo.png`
+## Quick Links
 
-**Mono (PNG 256):**
-`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/mono/256/logo.png`
+| Type         | PNG (256px)                                                                 | SVG                                                                |
+|--------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------|
+| **Color**    | [`color/256/logo.png`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/color/256/logo.png) | [`color/logo.svg`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/color/logo.svg) |
+| **Mono**     | [`mono/256/logo.png`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/png/mono/256/logo.png)   | [`mono/logo.svg`](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/mono/logo.svg)   |
 
-**SVG (color):**
-`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/color/logo.svg`
+> Change the size (`64`, `128`, `256`, `512`) and icon name as needed.
 
-**SVG (mono):**
-`https://raw.githubusercontent.com/okaza03/dashboard-icons/main/svg/mono/logo.svg`
+---
 
-> Swap the size (`64, 128, 256, 512`) and the icon name.
+## Available Icons
 
-## List of avaliable icons
-See [overview.txt](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/overview.txt) for the full list.
+See the [overview.txt](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/overview.txt) for a full list of icons.
 
-## Adding icons
-1. Put SVGs in the right folder:
-   - Full-color → `svg/color/<name>.svg`
-   - Black & white → `svg/mono/<name>.svg`
-2. Push to `main`. CI builds PNGs and updates `index.json`.
+---
 
-## Naming rules
-- File name = lower-kebab-case (`home-assistant.svg` → `homeassistant.svg` , `that-logo.svg` → `logo.svg`).
-- Transparent background, square-friendly (`viewBox="0 0 N N"` is ideal).
-- For `mono`, ensure pure black/white (no grays).
+## How to Add Icons
 
-## Indexes
-- `index.json` – all icons with metadata
-- `index.color.json` – color only
-- `index.mono.json` – mono only
+1. Place SVG files in the correct folder:
+   - **Color**: `svg/color/<name>.svg`
+   - **Mono**: `svg/mono/<name>.svg`
+2. Push changes to `main`. CI will build PNGs and update `index.json`.
+
+---
+
+## Naming & Format Rules
+
+- Use lower-kebab-case for file names (`home-assistant.svg` → `homeassistant.svg`, `that-logo.svg` → `logo.svg`)
+- Transparent backgrounds, square-friendly (`viewBox="0 0 N N"` preferred)
+- Mono icons must be pure black/white (no grays)
+
+---
+
+## Index Files
+
+- `index.json`: All icons with metadata
+- `index.color.json`: Color icons only
+- `index.mono.json`: Mono icons only
+
+---
 
 ## Legal
-Brand assets may be trademarks. Follow brand guidelines.
+
+Brand assets may be trademarks. Please follow brand guidelines.
