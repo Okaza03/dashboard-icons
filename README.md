@@ -20,6 +20,9 @@ Generated PNGs from SVG sources. Two categories:
 
 > Swap the size (`64, 128, 256, 512`) and the icon name.
 
+## List of avaliable icons
+See [overview.txt](https://raw.githubusercontent.com/okaza03/dashboard-icons/main/overview.txt) for the full list.
+
 ## Adding icons
 1. Put SVGs in the right folder:
    - Full-color → `svg/color/<name>.svg`
